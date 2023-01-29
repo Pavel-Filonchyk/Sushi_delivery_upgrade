@@ -17,7 +17,6 @@ app.use('/', router)
 app.use(fileUpload({}))           
 app.use(express.static('static')) 
 
-
 async function startApp() {
     try {
         await mongoose.connect(DB_URL, {useUnifiedTopology: true, useNewUrlParser: true})    

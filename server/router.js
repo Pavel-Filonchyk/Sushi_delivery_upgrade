@@ -8,6 +8,7 @@ import ControllerCartSushi from './Controllers/ControllerCartSushi.js'
 import ControllerAuth from './Controllers/ControllerAuth.js'
 import authMiddleware from './meddlewares/authMiddleware.js'
 import roleMiddleware from './meddlewares/roleMiddleware.js'
+import ControllerPostExpo from './Controllers/ControllerPostExpo.js'
 
 const router = new Router()
 
@@ -24,5 +25,7 @@ router.post('/registration', [
 router.post('/login', ControllerAuth.login)
 
 router.get('/users', roleMiddleware(['USER']), ControllerAuth.getUsers) 
+
+router.post('/expo', ControllerPostExpo.postExpo)
 
 export default router
