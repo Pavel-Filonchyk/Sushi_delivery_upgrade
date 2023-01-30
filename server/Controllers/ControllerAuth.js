@@ -15,7 +15,7 @@ const generateAccessToken = (id, roles) => {
 class ControllerAuth {
 
     async registration (req, res) {
-            console.log(req.body)
+            
         try {
             const errors = validationResult(req)                                  
             if (!errors.isEmpty()) {
@@ -45,6 +45,7 @@ class ControllerAuth {
     }
 
     async login (req, res) {
+        console.log(req.body)
         try {
             const { userName, password } = req.body  
             const user = await User.findOne({userName})                           

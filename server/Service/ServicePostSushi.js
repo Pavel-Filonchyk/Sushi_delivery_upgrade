@@ -8,7 +8,7 @@ class ServicePostSushi {
         try {
             const results = data.data
             const images = fs.readdirSync('./images')
-            const http = "http://146.190.16.70:3001/image/"
+            const http = "http://164.90.193.219:3001/image/"
             const addUrl = results.map((item, index) => {
                 return {
                     "sushiName":  item.sushiName,
